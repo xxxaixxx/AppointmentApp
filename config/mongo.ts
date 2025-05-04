@@ -1,0 +1,1 @@
+import mongoose from 'mongoose';\n\nconst mongoOptions = {\n  useNewUrlParser: true,\n  url: process.env.MONGODB_URI,\n  useUnifiedTopology: true,\n};\n\nexport default mongoose.connect(mongoOptions, async (err) => {\n  if (err) throw new Error('Failed to connect to MongoDB');\n});
